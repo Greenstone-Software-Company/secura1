@@ -1,150 +1,18 @@
-/* src/styles/Index.module.css */
 .container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  width: 100%;
-  background-color: #0d111a; /* Background color from the mockup */
-  color: #000000; /* Default text color from mockup */
-  padding: 20px; /* Padding to ensure content isn't flush against the edge */
-  font-family: "Quicksand", sans-serif; /* Font family from mockup */
+  height: 100vh;
+  background-color: #0d111a;
 }
 
 .main {
-  flex-grow: 1;
-  width: 100%;
-  max-width: 1200px; /* Max width for the main content */
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns for the main sections */
-  grid-gap: 20px; /* Space between the grid items */
-  background-color: #1a1a1a; /* Background for the main content area */
-  padding: 40px; /* Padding inside the main content area */
-  border-radius: 20px; /* Rounded corners for a modern look */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-}
-
-.header {
-  font-size: 36px; /* Larger text for the main heading */
-  font-weight: 700; /* Bolder font weight */
-  margin-bottom: 20px;
-  color: #000000; /* Black for better contrast as per mockup */
-  text-align: left;
-  width: 100%;
-}
-
-.subheader {
-  font-size: 20px; /* Subheader text size */
-  font-weight: 400; /* Regular font weight */
-  margin-bottom: 20px;
-  color: #000000; /* Lighter gray for the subheader text */
-}
-
-.card {
-  background-color: #2a2a2a; /* Card background color */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   padding: 20px;
-  border-radius: 10px; /* Rounded corners for cards */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-  color: #000000; /* Text color inside cards to match mockup */
 }
 
-.card-header {
+.welcome {
   font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #000000; /* Header text color */
-}
-
-.card-content {
-  font-size: 16px;
-  color: #000000; /* Text color inside the card */
-}
-
-.button {
-  background-color: #007bff; /* Primary button color */
-  color: #ffffff;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.button:hover {
-  background-color: #0056b3; /* Darker shade on hover */
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
-  grid-gap: 20px;
-  width: 100%;
-  margin-top: 20px;
-}
-
-.grid-item {
-  background-color: #2a2a2a; /* Background color for grid items */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for grid items */
-  color: #000000; /* Text color inside grid items */
-  text-align: center; /* Center align text */
-}
-
-.icon {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-}
-
-.icon-large {
-  width: 40px;
-  height: 40px;
-  margin-right: 15px;
-}
-
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.flex-space-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.search-bar {
-  width: 100%;
-  padding: 12px;
-  background-color: #1f1f1f;
-  border: none;
-  border-radius: 8px;
   color: #ffffff;
   margin-bottom: 20px;
-}
-
-.avatar {
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.list-item {
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: #333;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: #000000; /* Text color for list items */
-}
-
-.list-item:hover {
-  background-color: #444;
 }

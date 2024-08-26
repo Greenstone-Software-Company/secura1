@@ -1,0 +1,43 @@
+:root {
+    --primary-color: #128C7E;
+    --secondary-color: #25D366;
+    --background-color: #ECE5DD;
+    --text-color: #075E54;
+    --light-text-color: #ffffff;
+    --border-color: #dcdcdc;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .button {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .input {
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+  
+  .card {
+    background-color: var(--light-text-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }

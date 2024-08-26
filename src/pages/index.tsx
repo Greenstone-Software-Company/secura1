@@ -1,31 +1,44 @@
-import React, { useEffect } from 'react';
-import styles from '../styles/Index.module.css';
-import MeetingRoom from '../components/MeetingRoom';
-import Sidebar from '../components/Sidebar';
+import React, { useState, useEffect } from 'react';
 import { useSession } from 'next-auth/react';
-import { useRouter } from 'next/router';
+import Link from 'next/link';
+import styles from '../styles/Home.module.css';
+
+interface Conversation {
+  id: string;
+  contactName: string;
+  lastMessage: string;
+  timestamp: string;
+}
 
 const HomePage: React.FC = () => {
-  const { data: session, status } = useSession();
-  const router = useRouter();
+  const { data: session } = useSession();
+  const [conversations, setConversations] = useState<Conversation[]>([]);
 
   useEffect(() => {
-    if (status === 'unauthenticated') {
-      router.push('/login'); // Redirect to login page if not authenticated
-    }
-  }, [status, router]);
-
-  if (status === 'loading') {
-    return <div>Loading...</div>; // Optionally show a loading state while checking session
-  }
+    const fetchConversations = async () => {
+      const res = await fetch('/api/conversations');
+      const data = await res.json();
+      setConversations(data);
+    };
+    fetchConversations();
+  }, []);
 
   return (
     <div className={styles.container}>
-      <Sidebar />
-      <div className={styles.main}>
-        <h1>Welcome, {session?.user?.name}</h1>
-        <MeetingRoom />
-      </div>
+      <h1>Recent Conversations</h1>
+      <ul className={styles.conversationList}>
+        {conversations.map(conv => (
+          <li key={conv.id} className={styles.conversationItem}>
+            <Link href={`/chat/${conv.id}`}>
+              <div className={styles.conversationInfo}>
+                <h3>{conv.contactName}</h3>
+                <p>{conv.lastMessage}</p>
+              </div>
+              <span className={styles.timestamp}>{conv.timestamp}</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

@@ -1,130 +1,88 @@
-/* src/components/MeetingRoom.module.css */
-.container {
-  display: flex;
-  background-color: #f8f8f8; /* Light background for the entire container */
-}
-
-.sidebar {
-  width: 80px;
-  background-color: #151515; /* Dark sidebar */
-  min-height: 100vh;
-  padding-top: 20px;
+.chatContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  color: #fff; /* White icons and text */
-}
-
-.sidebarIcon {
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-
-.sidebarIcon img {
-  width: 30px;
-  height: 30px;
-}
-
-.dashboard {
-  flex-grow: 1;
-  padding: 40px; /* Increased padding for a more spacious feel */
-  background-color: #f0f0f0; /* Light gray background */
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  height: calc(100vh - 100px);
   width: 100%;
-  background-color: #fff; /* White header background */
-  color: #333; /* Dark text color */
-  padding: 15px 20px; /* Adjusted padding for balance */
-  border-radius: 10px; /* Smooth rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-  margin-bottom: 30px; /* More space below the header */
+  background-color: #1a1a1a;
+  color: #ffffff;
 }
 
-.welcomeMessage {
-  font-size: 28px; /* Larger, more prominent text */
-  font-weight: bold;
-}
-
-.searchBar {
+.messageList {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
   display: flex;
-  align-items: center;
-  width: 400px; /* Increased width for a more balanced look */
-  background-color: #f8f8f8; /* Light background */
-  border-radius: 20px; /* Smooth, rounded corners */
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Inset shadow for depth */
-  padding: 8px 16px;
+  flex-direction: column;
 }
 
-.searchBar input {
-  border: none;
-  background: none;
-  flex-grow: 1;
-  outline: none;
-  font-size: 16px; /* Slightly larger input text */
-  padding-left: 10px;
+.message {
+  max-width: 70%;
+  margin-bottom: 15px;
+  align-self: flex-end;
 }
 
-.searchButton {
-  background: none;
+.messageContent {
+  background-color: #0084ff;
+  padding: 10px 15px;
+  border-radius: 18px 18px 0 18px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.sender {
+  font-size: 0.8em;
+  margin-bottom: 5px;
+  text-align: right;
+}
+
+.messageText {
+  margin: 0;
+}
+
+.timestamp {
+  font-size: 0.7em;
+  color: rgba(255,255,255,0.7);
+  margin-top: 5px;
+  text-align: right;
+}
+
+.messageInputContainer {
+  display: flex;
+  padding: 20px;
+  background-color: #2a2a2a;
+}
+
+.messageInput {
+  flex: 1;
+  padding: 12px 15px;
   border: none;
+  border-radius: 20px;
+  background-color: #3a3a3a;
+  color: #ffffff;
+  font-size: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.sendButton {
+  margin-left: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #0084ff;
+  color: #ffffff;
+  font-size: 16px;
   cursor: pointer;
-  padding: 5px;
+  transition: background-color 0.3s;
 }
 
-.searchButton img {
-  width: 20px;
-  height: 20px;
+.sendButton:hover {
+  background-color: #0073e6;
 }
 
-.userAvatar {
-  display: flex;
-  align-items: center;
-}
-
-.userAvatar img {
-  width: 50px; /* Larger avatar size */
-  height: 50px;
-  border-radius: 50%;
-  margin-left: 15px;
-}
-
-.mainContent {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-  grid-gap: 30px; /* More space between elements */
-}
-
-.meetingSchedule, .createNew, .meetingDirectory, .meetingFeed {
-  background-color: #fff; /* White background for all sections */
-  padding: 25px; /* Increased padding for more comfortable spacing */
-  border-radius: 15px; /* Smooth, rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Consistent light shadow */
-}
-
-.sectionTitle {
-  margin-bottom: 15px; /* More space below the title */
-  font-weight: bold;
-  font-size: 20px;
-  color: #333; /* Dark text color */
-}
-
-.videoSection {
-  width: 100%;
+.emptyState {
   display: flex;
   justify-content: center;
-  margin-top: 30px; /* More space above the video section */
-}
-
-.video {
-  max-width: 600px;
-  border-radius: 15px; /* Smooth, rounded corners for video */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-}
-
-.error {
-  color: red;
+  align-items: center;
+  height: 100%;
+  color: rgba(255,255,255,0.5);
+  font-style: italic;
 }

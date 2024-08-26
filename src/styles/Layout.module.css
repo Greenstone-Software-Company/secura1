@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #128C7E;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  
+  .active {
+    font-weight: bold;
+    border-bottom: 2px solid white;
+  }
+  
+  .main {
+    flex: 1;
+    overflow-y: auto;
+  }

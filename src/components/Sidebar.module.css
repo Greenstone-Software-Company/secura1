@@ -1,23 +1,23 @@
 .sidebar {
-  position: fixed; /* Keeps the sidebar fixed as you scroll */
-  top: 70px; /* Positions the sidebar 70px from the top */
-  left: 0; /* Aligns the sidebar to the left edge of the viewport */
-  width: 67px; /* Sets the width of the sidebar */
-  height: 100vh; /* Ensures the sidebar takes up the full height of the viewport */
-  background-color: #0d111a; /* Dark background color as per Uizard */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+  width: 60px;
+  height: 100vh;
+  background-color: #0d111a;
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 1000; /* Ensures the sidebar stays on top of other content */
-  padding: 20px 0; /* Adjusts padding for spacing */
+  padding-top: 20px;
 }
 
-.link {
-  margin-bottom: 20px; /* Space between each icon link */
+.sidebarIcon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.link img {
-  width: 40px; /* Icon width */
-  height: 40px; /* Icon height */
+.sidebarIcon img {
+  width: 24px;
+  height: 24px;
 }

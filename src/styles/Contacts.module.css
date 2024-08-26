@@ -1,0 +1,26 @@
+.container {
+    padding: 20px;
+  }
+  
+  .searchInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .contactList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .contactItem {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+  }
+  
+  .contactItem:hover {
+    background-color: #f5f5f5;
+  }

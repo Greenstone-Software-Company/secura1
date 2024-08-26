@@ -15,3 +15,6 @@ body {
   padding-top: 70px; /* Space for navbar */
   box-sizing: border-box;
 }
+@import 'theme.css';
+
+/* Rest of your global styles */
