@@ -18,7 +18,7 @@
     "paths": {
       "@/components/*": ["src/components/*"]
     },
-    "typeRoots": ["./types", "./node_modules/@types"]
+    "typeRoots": ["./node_modules/@types", "./types"]  // Corrected order for typeRoots
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
